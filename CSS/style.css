@@ -1,3 +1,6 @@
+:root {
+  --padding-section: 150px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +20,8 @@ a {
 
 .section {
   transition: transform 1.5s, opacity 1.5s;
-  height: 100vh;
+  padding: var(--padding-section) 0;
+  /* height: 100vh; */
 }
 
 .section-hidden {
@@ -28,7 +32,8 @@ a {
 .header {
   position: relative;
   width: 100%;
-  padding-top: 4rem;
+  padding-bottom: 200px;
+  padding-top: 80px;
   transition: 0.5s;
   margin-inline: auto;
 }
@@ -37,7 +42,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0rem;
   padding: 8px 8px;
   border-radius: 999px;
   background-color: #ebebeb;
@@ -64,9 +68,7 @@ a {
 
 .introduction {
   position: relative;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-top: 9rem;
 }
 
 .emoji {
@@ -84,7 +86,7 @@ a {
 }
 
 .text h1 {
-  font-size: clamp(1.4rem, 2.5vw, 3rem);
+  font-size: clamp(1.7rem, 2.5vw, 3rem);
   margin-bottom: 10px;
 }
 
@@ -97,10 +99,6 @@ a {
 .text p {
   font-size: clamp(0.8rem, 2.5vw, 1.2rem);
   color: #777;
-}
-
-.projects {
-  height: 100vh;
 }
 
 .info {
@@ -116,8 +114,8 @@ a {
 }
 
 .slider {
-  max-width: 27%;
-  height: 65%;
+  max-width: 450px;
+  height: 550px;
   margin: 0 auto;
   position: relative;
 
@@ -154,7 +152,7 @@ a {
   border-radius: 50%;
   height: 2.5rem;
   width: 2.5rem;
-  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   cursor: pointer;
   transition: 0.5s;
 }
@@ -164,12 +162,12 @@ a {
 }
 
 .slider__btn--left {
-  left: 7%;
+  left: 8%;
   transform: translate(-50%, -50%);
 }
 
 .slider__btn--right {
-  right: 7%;
+  right: 8%;
   transform: translate(50%, -50%);
 }
 
@@ -204,34 +202,15 @@ a {
 
 @media (max-width: 767px) {
   .slider {
-    max-width: 80%;
-    height: 50%;
-  }
-
-  .project-box .project-image {
-    max-width: 450px;
+    max-width: 300px;
+    height: 385px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .slider {
-    max-width: 70%;
-    height: 70%;
-  }
-
-  .project-box .project-image {
-    max-width: 450px;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .slider {
-    max-width: 50%;
-    height: 70%;
-  }
-
-  .project-box .project-image {
-    max-width: 450px;
+    max-width: 400px;
+    height: 485px;
   }
 }
 
@@ -279,19 +258,18 @@ a {
 .skills {
   width: 100%;
   position: relative;
-  transform: translateY(20%);
 }
 
 .skills .info {
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  transform: translateY(-3.9%);
 }
 
 .skills .orbit {
   width: clamp(250px, 2.5vw, 350px);
   height: clamp(250px, 2.5vw, 350px);
   position: absolute;
-  top: 40%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -322,7 +300,7 @@ a {
 }
 
 .skills .orbit .js {
-  right: 90%;
+  right: 95%;
   top: 40%;
 }
 
@@ -347,7 +325,6 @@ a {
   justify-content: space-evenly;
   margin-inline: auto;
   width: 90%;
-  padding-bottom: 50px;
 }
 
 @media (max-width: 1100px) {
