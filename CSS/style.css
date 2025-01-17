@@ -113,146 +113,87 @@ a {
   margin-top: -10px;
 }
 
-.slider {
-  max-width: 450px;
-  height: 550px;
-  margin: 0 auto;
-  position: relative;
-
-  background-color: white;
-
-  /* IN THE END */
-  overflow: hidden;
-  box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
-  border-radius: 32px;
-}
-
-.slide {
-  position: absolute;
-  top: 0;
-  width: 100%;
-
+.projects-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  /* THIS creates the animation! */
-  transition: transform 1s;
-}
-
-.slider__btn {
-  position: absolute;
-  bottom: -1%;
-  z-index: 10;
-
-  border: none;
-  font-family: inherit;
-  color: #b9b9b9;
-  background-color: transparent;
-  border-radius: 50%;
-  height: 2.5rem;
-  width: 2.5rem;
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.slider__btn:hover {
-  color: #777;
-}
-
-.slider__btn--left {
-  left: 8%;
-  transform: translate(-50%, -50%);
-}
-
-.slider__btn--right {
-  right: 8%;
-  transform: translate(50%, -50%);
-}
-
-.dots {
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.dots .dot {
-  border: none;
-  background-color: #b9b9b9;
-  opacity: 0.7;
-  height: clamp(0.8rem, 2.5vw, 1rem);
-  width: clamp(0.8rem, 2.5vw, 1rem);
-  border-radius: 50%;
-  margin-right: 1.75rem;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-.dots .dot:last-child {
-  margin: 0;
-}
-
-.dots .dot-active {
-  background-color: #888;
-  opacity: 1;
-}
-
-@media (max-width: 767px) {
-  .slider {
-    max-width: 300px;
-    height: 385px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .slider {
-    max-width: 400px;
-    height: 485px;
-  }
+  /* justify-content: space-between; */
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
 .project-box {
+  max-width: 350px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 25px;
+  transition: all 0.3s ease;
+  background-color: white;
+  border-radius: 32px;
+  padding: 30px 30px;
+  box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
 }
 
-.project-box .project-image {
-  max-width: 450px;
-  transition: 0.3s;
-  cursor: pointer;
-  margin-inline: auto;
-}
-
-.project-box .project-image:hover {
-  transform: scale(1.05);
-  filter: brightness(75%);
-}
-
-.project-box .project-image img {
-  border-radius: 12px;
-  max-width: 100%;
-}
-
-.project-box .project-info {
-  margin-top: -5px;
+.project-box h4 {
+  font-size: 2.25rem;
+  font-weight: 600;
   color: black;
-  text-align: center;
 }
 
-.project-box .project-info h1 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  margin-bottom: 8px;
+.project-box h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: black;
 }
 
-.project-box .project-info p {
-  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+.project-description {
+  font-size: 1rem;
   color: #777;
+  margin: 15px 0;
+}
+
+.project-link {
+  font-size: 1rem;
+  color: #3182ce;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.arrow-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .projects-container {
+    justify-content: space-evenly;
+  }
+
+  .project-box {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-container {
+    justify-content: center;
+  }
+
+  .project-box {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-box {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .skills {
@@ -289,19 +230,24 @@ a {
   position: absolute;
 }
 
-.skills .orbit .html {
+.skills .orbit .java {
   left: 40%;
   top: -9%;
 }
 
-.skills .orbit .css {
+.skills .orbit .tailwind {
   left: 40%;
   bottom: -9%;
 }
 
-.skills .orbit .js {
+.skills .orbit .react {
   right: 95%;
   top: 40%;
+}
+
+.skills .orbit .git {
+  right: -9%;
+  bottom: 40%;
 }
 
 .skills .orbit .git {
